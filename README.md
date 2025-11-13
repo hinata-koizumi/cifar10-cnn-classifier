@@ -70,23 +70,8 @@ Target and rules follow the assignment’s constraints; please see the script he
 
 - Inference and saving
   - Save predictions for `x_test` to `submission.csv` under `work_dir` with header `label` and index `id`.
-
-## How to Run (Google Colab)
-
-1. Open Google Colab and load `src/lecture05_homework.py` (the script is Colab-ready and mounts Google Drive).
-2. Prepare the following files under your Drive path: `drive/MyDrive/第5回/data/`
-   - `x_train.npy`, `t_train.npy`, `x_test.npy`
-3. Ensure `work_dir = 'drive/MyDrive/第5回'` (default in the script). Execute the script cells end-to-end.
-4. Training runs for 160 epochs (uses AMP on CUDA if available). The script will evaluate with EMA, perform TTA on test, and write `submission.csv` to `work_dir`.
-
-Notes
-- The script sets `seed=42` but uses cuDNN benchmarking for speed (`benchmark=True`), so exact bitwise reproducibility is not guaranteed across hardware/drivers.
-- Batch size defaults to 128 for WRN-28-10; adjust if you encounter memory limits.
-
-## File
-
-- `src/lecture05_homework.py`: Full training/evaluation/inference pipeline (WRN-28-10, RandAug + Mixup/CutMix + EMA + Clean-FT, TTA).
-
+ 
+  
 ## Technologies Used
 
 - Python 3
