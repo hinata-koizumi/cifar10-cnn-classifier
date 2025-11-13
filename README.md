@@ -4,7 +4,7 @@ English | [日本語版(Japanese)](README.ja.md)
 
 ## Competition Results
 
-- **Final Rank**: **8th/1,365participants**
+- **Final Rank**: **8th / 1,365participants**
 - **LB Score**: **0.9683**
 
 ## Overview
