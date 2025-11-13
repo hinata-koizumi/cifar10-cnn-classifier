@@ -71,21 +71,6 @@ WideResNet-28-10 を中核とした CNN によって CIFAR-10（10クラス）�
 - 推論と書き出し
   - `work_dir` 配下に `submission.csv` を出力。ヘッダは `label`、インデックスは `id`。
 
-## 実行方法（Google Colab）
-
-1. Google Colab で `src/lecture05_homework.py` を開きます（Drive マウントを含めた Colab 用スクリプトです）。
-2. Google Drive 上の `drive/MyDrive/第5回/data/` に以下のファイルを配置します。
-   - `x_train.npy`, `t_train.npy`, `x_test.npy`
-3. スクリプト内で `work_dir = 'drive/MyDrive/第5回'` が設定されていることを確認し（デフォルト）、セルを順に実行します。
-4. 160 エポックの学習を実行し（CUDA 利用時は AMP に対応）、EMA で評価・TTA を行った後、`submission.csv` を `work_dir` に保存します。
-
-備考
-- `seed=42` を設定していますが、cuDNN の高速化設定（`benchmark=True`）により環境差で完全な再現性は保証されません。
-- バッチサイズはデフォルト 128 です。メモリ上限に達する場合は調整してください。
-
-## ファイル
-
-- `src/lecture05_homework.py`: 学習・評価・推論を一括で実行するスクリプト（WRN-28-10、RandAug + Mixup/CutMix + EMA + Clean-FT, TTA）。
 
 ## 使用技術
 
